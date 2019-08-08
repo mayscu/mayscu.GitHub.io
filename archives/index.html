@@ -1,172 +1,31 @@
-<!DOCTYPE html>
-<html lang="Chinese">
-
+<!doctype html>
+<html lang="en">
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-
-    
-      <link rel="icon" href="/favicon.ico">
-    
-
-    <title>
-        
-          mayscu.io
-        
-    </title>
-
-    <!-- Spectre.css framework (v0.5.8) -->
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-
-    <!-- Noto Sans TC -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
-    <!-- Noto Sans SC -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
-    <!-- Noto Sans -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-
-    <!-- theme css & js -->
-    <link rel="stylesheet" href="/css/spectre_custom.css">
-    <link rel="stylesheet" href="/css/book.css">
-    <script src="/js/book.js"></script>
-
-    <!-- tocbot -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-    <!-- katex -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-
-    
+<meta charset="utf-8">
+<title>Archive - mayscu.io</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://yoursite.com/archives/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="mayscu.io">
+<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:site_name" content="mayscu.io">
+<meta property="og:locale" content="Chinese">
+<meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mayscu.io">
+<meta name="twitter:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
+<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="/styles.27f292de72d9e7a2cdaf.css" rel="stylesheet">
+<link rel="stylesheet" href="/theme.6e0d1500b96f1709ea89.css">
+<script src="/config.ed190dc148e4743e841e.js"></script>
 </head>
-
-<body>
-
-<div class="container">
-  <div class="book-container">
-    <div class="columns">
-      <div class="column col-2 hide-lg">
-        <div class="book-sidebar">
-  <h4 class="site-meta">
-    <a href="/">mayscu.io</a>
-  </h4>
-  <div class="sidebar-content">
-    
-  </div>
-</div>
-
-<script src="/js/book-sidebar.js"></script>
-      </div>
-
-      <div class="column col-8 col-lg-12">
-        <div class="book-content">
-          <div class='book-archive'>
-  <!-- Title -->
-  
-    <h2>Archives</h2>
-  
-
-  
-    <!-- Split post by year -->
-    
-  
-
-  
-      <div class="book-archive-years">
-          <ul class="archive-list-item">
-          
-              <li>
-                <span>2019-08-08</span>
-                <a href="/2019/08/08/ssss/">
-                  ssss
-                </a>
-              </li>
-          
-              <li>
-                <span>2019-08-08</span>
-                <a href="/2019/08/08/hello-world/">
-                  Hello World
-                </a>
-              </li>
-          
-          </ul>
-      </div>
-  
-
-  
-</div>
-        </div>
-      </div>
-
-      <div class="column col-2 hide-lg">
-        <div class="book-toc">
-  <div class="book-tocbot">
-  </div>
-  <div class="book-tocbot-menu">
-    <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
-    <a onclick="go_top()">Back to top</a>
-    <a onclick="go_bottom()">Go to bottom</a>
-  </div>
-</div>
-
-<script>
-tocbot.init({
-  tocSelector: '.book-tocbot',
-  contentSelector: '.book-post',
-  headingSelector: 'h1, h2, h3, h4, h5',
-  collapseDepth: 2,
-  orderedList: false,
-  scrollSmooth: false,
-});
-
-function expand_toc(){
-  var b = document.querySelector(".book-toc-expand");
-  tocbot.init({
-    tocSelector: '.book-tocbot',
-    contentSelector: '.book-post',
-    headingSelector: 'h1, h2, h3, h4, h5',
-    collapseDepth: 6,
-    orderedList: false,
-    scrollSmooth: false,
-  });
-  b.setAttribute("onclick", "collapse_toc()");
-  b.innerHTML = "Collapse all"
-}
-
-function collapse_toc(){
-  var b = document.querySelector(".book-toc-expand");
-  tocbot.init({
-    tocSelector: '.book-tocbot',
-    contentSelector: '.book-post',
-    headingSelector: 'h1, h2, h3, h4, h5',
-    collapseDepth: 2,
-    orderedList: false,
-    scrollSmooth: false,
-  });
-  b.setAttribute("onclick", "expand_toc()");
-  b.innerHTML = "Expand all"
-}
-
-function go_top() {
-  window.scrollTo(0, 0);
-}
-
-function go_bottom() {
-  window.scrollTo(0, document.body.scrollHeight);
-}
-
-</script>
-      </div>
-    </div>
-  </div>
-</div>
-
+<body lang="en">
+<is-d2a57d></is-d2a57d>
+<script src="/runtime.9c308a63d02029c20228.js"></script>
+<script src="/polyfills-es5.613d1909ec381c0aefb7.js"></script>
+<script src="/polyfills.23aa31104b29f3163090.js"></script>
+<script src="/main.99f2ed354d17ddb7e297.en.js"></script>
 </body>
 </html>
