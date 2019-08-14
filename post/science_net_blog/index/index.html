@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="Chinese">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.ico">
+    
+
+    <title>
+        
+          mayscu.io
+        
+    </title>
+
+    <!-- Spectre.css framework (v0.5.8) -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <!-- Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <!-- Noto Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <!-- theme css & js -->
+    <link rel="stylesheet" href="/css/spectre_custom.css">
+    <link rel="stylesheet" href="/css/book.css">
+    <script src="/js/book.js"></script>
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+</head>
+
+<body>
+
+<div class="container">
+  <div class="book-container">
+    <div class="columns">
+      <div class="column col-2 hide-lg">
+        <div class="book-sidebar">
+  <h4 class="site-meta">
+    <a href="/">mayscu.io</a>
+  </h4>
+  <div class="sidebar-content">
+    <ul>
+<li><a href="/">主页</a></li>
+<li>项目<ul>
+<li><a href="/post/projects/udacity/Udacity_index">Udacity机器学习工程师纳米学位</a></li>
+</ul>
+</li>
+<li>论文<ul>
+<li><a href="/post/science_net_blog">科学网博客情报学领域学术圈的社会网络分析</a><br>*Test1<br>*Test2</li>
+</ul>
+</li>
+<li>学习笔记</li>
+<li>关于我</li>
+</ul>
+
+  </div>
+</div>
+
+<script src="/js/book-sidebar.js"></script>
+      </div>
+
+      <div class="column col-8 col-lg-12">
+        <div class="book-content">
+          <div class="book-navbar">
+  <header class="navbar">
+  <section class="navbar-section">
+    <img class="navbar-icon" src="/favicon.ico">
+  </section>
+  <section class="navbar-center">
+    mayscu.io
+  </section>
+  <section class="navbar-section">
+    <label class="accordion-header c-hand" for="accordion-sidebar">
+      <i class="icon icon-menu"></i>
+    </label>
+  </section>
+</header>
+
+<div class="accordion">
+  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
+  <div class="accordion-body">
+    <ul>
+<li><a href="/">主页</a></li>
+<li>项目<ul>
+<li><a href="/post/projects/udacity/Udacity_index">Udacity机器学习工程师纳米学位</a></li>
+</ul>
+</li>
+<li>论文<ul>
+<li><a href="/post/science_net_blog">科学网博客情报学领域学术圈的社会网络分析</a><br>*Test1<br>*Test2</li>
+</ul>
+</li>
+<li>学习笔记</li>
+<li>关于我</li>
+</ul>
+
+  </div>
+</div>
+</div>
+
+<div class="book-post">
+  <h1 id="基于SNA的非正式学术交流研究——以科学网博客情报学领域学术圈为例"><a href="#基于SNA的非正式学术交流研究——以科学网博客情报学领域学术圈为例" class="headerlink" title="基于SNA的非正式学术交流研究——以科学网博客情报学领域学术圈为例"></a>基于SNA的非正式学术交流研究——以科学网博客情报学领域学术圈为例</h1><p><strong>备注：这篇文章是我本科时做过的一个小论文，当时对社会网络分析比较感兴趣，就想试着投稿一下，最后没投中，我觉得还是结论太浅，不过是描述数据而已。不过我还是把它放在这里，因为写作过程中基本按照学术口吻写的，可能读起来不是那么的有趣。</strong></p>
+<p>前苏联情报学家米哈伊诺夫认为，人类社会中提供、传递和获取科学信息的种种过程是科学赖以存在和发展的基本体制，这些过程总称为科学交流[^1]。其中，学者一般将以文献为渠道的交流称为正式交流，而非正式交流则偏重于通过人际关系进行交流，突破了时间和空间的限制，过程更开放，内容也趋于多样化，具有很强的社会性。所以非正式交流能进一步促进知识扩散，是知识创新的重要源泉。<br>邹儒楠、于建荣曾在文章中指出，网络的发展使得人们更注重通过人际关系进行非正式学术交流，以此来弥补正式学术交流的文献渠道的不足[^2]。随着 web2.0 的高速发展，各式各样的社交网络为专业领域内的学者搭建起了交流平台，平台基于社交网络跨时空、开放性的特点为学者之间的合作交流、知识共享、互评互议提供了便利，越来越多的学科领域学者开始通过更为灵活、便捷的虚拟网络平台进行学术交流[^3]。<br>本文借助社会网络分析法（SNA），以全球最大的中文科学社区——科学网为数据源，对该社区博主的好友链接关系进行量化分析，从而了解博主之间的合作交流现状，描绘学术环境下博主关联社群图，寻找对学术领域研究具有重要意义的作者群及其联系紧密程度，并为如何通过社会网络中的人际关系促进知识交流、知识创新提供建议。</p>
+<h2 id="1-研究过程"><a href="#1-研究过程" class="headerlink" title="1.研究过程"></a>1.研究过程</h2><h3 id="1-1-研究对象"><a href="#1-1-研究对象" class="headerlink" title="1.1 研究对象"></a>1.1 研究对象</h3><p>科学网博客的用户群体主要是国内各学术领域的研究学者，它作为国内学术博客的典型，以其广泛的用户基础、多样化的学科领域、较高的用户活跃度，在非正式学术交流平台中具有相当的代表性。本研究将着眼点放在科学网博客中情报学领域内学术博主之间的好友链接关系的定量分析上，从非正式学术交流圈的整体(学术圈)与个体(博主)两个层面， 以各类社会网络计量指标对其进行评价并辅以一定的网络可视化。</p>
+<h3 id="1-2-研究方法"><a href="#1-2-研究方法" class="headerlink" title="1.2 研究方法"></a>1.2 研究方法</h3><p>社会网络分析(Social Network Analysis)作为目前一种已经较为成熟的定量分析理论体系，得到了许多专业领域的应用。社会网络(Social Network)即是在社会关系的基础上形成的可视化架构。在本研究中，科学网博客情报学专业领域内的用户群体之间的好友关系可看作一种虚拟社会结构，通过构造“互为好友”的社会网络矩阵，按照不同的分析角度与指标对其进行量化分析，可对存在的现象进行较为深入的揭示。Ucinet 作为目前较为普遍的社会网络分析软件，功能强大，同时也集成了 Mage、Netdraw、Pajek 三个社会网络可视化软件[^4]。本研究对采集的数据进行预处理之后，利用 Ucinet 6 与 Netdraw 对数据样本进行分析。</p>
+<h3 id="1-3-研究视角"><a href="#1-3-研究视角" class="headerlink" title="1.3 研究视角"></a>1.3 研究视角</h3><p>社会网络分析法可以从多个不同角度对社会网络进行分析，包括中心性分析、凝聚子群分析、核心一边缘结构分析以及结构对等性分析等。<br>本文采用以下几个关键指标作为研究视角[^5]。</p>
+<ul>
+<li>（1）密度与距离：密度(Density)在SNA中代表社会网络中每个节点之间的紧密程度，是实际存在的关系总数与网络中可能存在的关系总数之比。距离(Distance)是指在网络中节点之间需要跨越的最短路径。平均距离即在网络中两个点之间平均需要跨越几个点才能进行连接。</li>
+<li>（2）中心性：中心性是社会网络分析的重点之一，其中包括中心度分析与中心势分析， 可以说明个人或组织在社会网络中具有怎样的权力，或居于怎样的中心地位。</li>
+<li>（3）凝聚子群：当网络中某些行动者之间的关系较为紧密，并结合成一个团体时，这样的团体在 SNA 中被称为凝聚子群。需要关注的是网络中存在多少个这样的子群，子群内部成员之间的关系特点，子群之间的关系特点，不同子群成员之间的关系特点等。<h2 id="2-科学网情报学领域学者交流的社会网络分析研究"><a href="#2-科学网情报学领域学者交流的社会网络分析研究" class="headerlink" title="2.科学网情报学领域学者交流的社会网络分析研究"></a>2.科学网情报学领域学者交流的社会网络分析研究</h2>科学网开通博客的博主都需要进行实名制认证，并且，科学网博客的好友关系为双向性，即不存在某一用户单方面为另一用户好友的情况。由此，各位博主之间的好友关系就可以组成一个链接形式的双向好友网络。<br>本研究利用爬虫工具爬取了科学网情报学领域的博主名录中所有的博主，消除重复名录之后，共有 514 位博主①。通过浏览514博主的关注情况后发现拥有同为情报学领域内好友的博主共 224 位， 占领域内所有注册用户的 43.6%。这说明有 50%左右的注册过的博主没有结交任何好友， 且基本无任何博文以及互动。在这种情况下可认为其未在科学网进行过学术交流，所以不在本次研究范围之内。经过数据采集和预处理后，将 224 位博主用 U1、U2、U3…U224 匿名代替。可以构建一个224 × 224的情报学学术圈邻接矩阵。若两位博主之间存在好友关系，则记为“1”，否则记为“0”。结果显示，224 位情报学领域内的博主共产生了 1726 个好友关系，平均每个博主拥有 7.7 个同领域的好友。<h3 id="2-1-博客学术圈的密度与平均距离"><a href="#2-1-博客学术圈的密度与平均距离" class="headerlink" title="2.1 博客学术圈的密度与平均距离"></a>2.1 博客学术圈的密度与平均距离</h3>在一定程度的社会网络规模下，密度可以用来表示整体社会网络的紧密性，对考察样本中博主之间的交流程度有重要意义。如表 1 所示，科学网博客情报学学术圈网络的密度为 0.0346。由于密度没有标准值进行对比，所以为了了解本次研究所得数值的真实含义， 笔者参考了三篇研究社会网络的文献[^6]。总体上讲，社会网络密度越大，该网络对博主的态度、行为等产生的影响可能越大，博主之间交流越紧密，协作程度越高。通过与汪国富、钟志贤著作中的研究样本进行对比可知[^7]，本研究的节点数与网络密度均与对方样本数据较为相近，不同的是对方的研究样本是通过滚雪球抽样选取的科学网博客的博主，未针对特定学术领域进行研究。由此可以得知，在科学网情报学领域学术博客圈内，整体的人际或信息交流较少，协作程度较低。<br>平均距离指网络中所有节点之间最短路径的平均长度[^8]。主要用于评价网络中学术信息交流的难易程度和信息传播速度。网络的平均距离为 2.554，即一个博主平均需要跨越2.6 个博主即可与另一个博主相连接，并且网络内聚类系数(0.556)不低，说明该学术圈内具有一定的小世界效应，在小世界群体中信息交流比较通畅，人际关系的交流互通较为容易，信息的传播速度快。<br><img src="DraggedImage.tiff" alt></li>
+</ul>
+<h3 id="2-2-博客学术圈的个体中心性分析"><a href="#2-2-博客学术圈的个体中心性分析" class="headerlink" title="2.2 博客学术圈的个体中心性分析"></a>2.2 博客学术圈的个体中心性分析</h3><p>相对于网络中的节点个体而言，中心度(Centrality)指与该节点有直接关系的点的总数目， 包括点出度与点入读两项指标。出度表征了该节点直接指向其他节点的总数，是衡量该节点 活跃的程度; 点入度表征了该节点被其他节点关注的总数，是衡量该节点对信息控制的优势[^9]。中心度越高的节点通常越处于网络的核心地位，对网络中其他各节点有较大的影响。其根据研究的侧重点不同，中心性可分为点度中心度、中介中心度、接近中心度等，通过中心性可以了解在科学网博客的情报学领域内拥有较高影响力的博主。</p>
+<h4 id="1-点度中心度"><a href="#1-点度中心度" class="headerlink" title="1. 点度中心度"></a>1. 点度中心度</h4><p>点度中心度(Degree)是测量一个节点和其他网络节点的直接有向性联系的数目指标， 分为出度值与入度值。在本研究中，由于科学网博客好友关系的双向性，所有代表博主的节点的出度值与入度值均相同。统计可得点度中心度最高的前 10 位博主分别为 U98、U167、U456、U359、U488、U457、U42、U373、U290(详见表 2)。<br><img src="DraggedImage-1.tiff" alt><br><img src="DraggedImage-2.tiff" alt><br>以 Netdraw 绘制出以点度中心度作为优化网络布局条件的社群图后(图 1)，可以看出， 上述的 10 位中心度较强的节点相对较大，且处于网络的中心，线条联系非常密集。这反映了节点中心性高的几位博主拥有非常广阔的专业领域人脉，如 U98 点度中心度为 48.9%， 几近与学术圈内一半的博主是好友关系，这样的用户在非正式学术交流平台中处于“领袖” 地位，他们在圈内的话语权高，分享传递的信息或知识影响范围更广。<br><img src="%E5%9B%BE%E7%89%87%201.png" alt="图 1 以点度中心度布局的社群图" title="图 1 以点度中心度布局的社群图"></p>
+<h4 id="2-中间中心度"><a href="#2-中间中心度" class="headerlink" title="2.中间中心度"></a>2.中间中心度</h4><p>中间中心度(Betweenness)是用于测量节点对整个网络的控制程度的中心性指标[^10]。当网络中某个节点的中心度很高，它就会对整个网络的交流能力有很高的控制能力，具体表现为网络中越来越多的其他节点需要通过此节点才能进行联系与交流。经统计，可得出中间中心度较高的几位博主。(见表 3)<br><img src="DraggedImage-3.tiff" alt><br><img src="DraggedImage-4.tiff" alt><br>以 Netdraw 绘制出以中间中心度作为网络布局条件的社群图。(见图 2)此时，将中间中心性高的节点分布于网络结构的周围，能够较为清晰地显示其作为情报学非正式交流学术圈的“纽带”作用，节点越突出则表明中间中心性越高。这些节点在网络中担当着维持学术圈内密切交流的作用，若这些节点消失，人际交流的链接被打断，其他节点近乎处于零散孤立的状态，整个好友网络的交流与沟通则会变得相对闭塞。<br><img src="%E5%9B%BE%E7%89%87%201-1.png" alt><br>此外，研究统计得出，在 224 个节点中，有 95 个节点的中间中心性为 0，占节点总数的 42.4%，这些节点在社会网络中基本没有起到信息交流的“桥梁”、“纽带”作用，故而， 这些节点代表的博主在整个交流学术圈内参与的信息交流也比较少，处于信息交流的边缘位置。</p>
+<h4 id="3-学术圈集中程度分析"><a href="#3-学术圈集中程度分析" class="headerlink" title="3.学术圈集中程度分析"></a>3.学术圈集中程度分析</h4><p>点度中心度仅仅是对网络节点中心度的一种测量，而对关系网络总体的整合程度和一致性趋势我们需要关注一个行动者与网络中其他行动者的接近程度，即社会网络中心势<br>[^11]。本次统计了两类中心势：点度中心势以及中间中心势(见表 4)。<br>点度中心势为 45.63%，处于中等水平，说明网络具有一定的集中性，圈内的人际关系有向“领袖人物”靠拢的趋势，该结论与上述结点中心度出现几位高话语权人物的结论一 致。<br>中间中心势为 29.38%，处于较低的水平。说明虽然存在中间中心性较高的博主，但是社交网络中知识的交流共享、人际关系的沟通没有被中心性人物控制、垄断，可能更乐意与相同研究领域的同行进行交流并建立友谊，共同协作创新，促进学科发展。<br><img src="DraggedImage-5.tiff" alt></p>
+<h3 id="2-3-凝聚子群分析"><a href="#2-3-凝聚子群分析" class="headerlink" title="2.3 凝聚子群分析"></a>2.3 凝聚子群分析</h3><p>已知科学网博客的情报学领域内的学术交流存在高点度中心势与低中间中心势的两面性，所以笔者通过凝聚子群对本网络内部具体的好友交流情况进行一定的分析考察。<br>当网络中某些行动者之间的关系较为紧密，并结合成一个团体时，这样的团体在 SNA<br>中被称为凝聚子群。</p>
+<h4 id="1-成分的弱关联分析"><a href="#1-成分的弱关联分析" class="headerlink" title="1.成分的弱关联分析"></a>1.成分的弱关联分析</h4><p>成分弱关联(weak)分析是测量社会网络中的任意两点节点之间能够通过一定的途径相连，则认为它们之间为一个团体。一般而言，在社会网络中不存在大量的孤点以及不是特别松散的情况下，节点之间都能通过这样一种弱关联进行关联，成为一个较大的团体。通过这种方式可以分析出社会网络中范围较小的孤立团体。<br>经过 Ucinet 分析可得，网络中的 224 个节点有 220 个都可以通过一定的关系进行关联，说明本网络拥有非常高的弱关联性，同时再次验证了其具有非常强的小世界效应。<br><img src="DraggedImage-6.tiff" alt><br>从社群网络中发现有四个节点处于孤立小团体的状态，这四个节点代表的博主为:U158、U253、 U307、U383。其关联关系见图 3。可以看出，孤立小团体中联系非常紧密，即每个节点与其他 3 个节点相连。由此，此小团体具有较强的关联性，可以看作一个交流紧密的科研小团体。<br><img src="DraggedImage-7.tiff" alt></p>
+<h4 id="2-k核分析"><a href="#2-k核分析" class="headerlink" title="2. k核分析"></a>2. k核分析</h4><p>K-核是基于度数值(Degree)的一种凝聚子群分析方法。是指如果网络中一个子图中的全部点都至少与该子图中的 K 个其他点邻接，则称这个子图为 K-核<a href="#">13</a>。在最简单的 1-核中， 即所有的节点的度数都至少为 1，同理，2-核则是在 1-核的基础上继续分离出度数至少为 2 的节点……以此类推，K 值越大，语义要求越高。通过分析后可按照 K 值的不同将整个网络划分为多个小团体，这样的小团体可对网络进行细微的考察从而对网络的的中心势与密度进行进一步的诠释和补充。<br>以 Ucinet 通过“网络-区域-K 核”的步骤进行输入数据操作，可以得出整个学术圈的网络可以分为 1-10 共 10 个度数的区域(见图 4，为方便数据显示，已对 224 个节点进行了编号)。将 K&gt;=Degree 改为以 K=Degree 作为分区标准，降低数据冗余后，从从中可以以从度数的高底得出不同分区的节点数量和比例(见表 6)。<br><img src="DraggedImage-8.tiff" alt><br><img src="DraggedImage-9.tiff" alt></p>
+<p>从中可以得知，处于 10-核团体的 24 个节点代表的博主贡献了总关系数(1726)的<br>49.5%，即以一成的用户数量产生了总好友关系的一半左右，这些博主在整个学术圈中基本处于最为活跃的状态，验证了节点集中的趋势。同时，224 个节点分为了 10 个区域，与其他社会网络的 K-核区域数相比较多；并且除 10-核、9-核之外的其他分区的链接关系数量都较为稀少，揭示了网络密度与中心势比较平庸的原因。以 Netdraw 对 K-核凝聚子群进行可视化(见图 5)，可以明显看出所有节点按 K 值分为了 10 个分区，其中 10-核区位于中心，关系数目也最为密集。<br><img src="DraggedImage-10.tiff" alt></p>
+<h3 id="2-4-个体交叉学科影响力"><a href="#2-4-个体交叉学科影响力" class="headerlink" title="2.4 个体交叉学科影响力"></a>2.4 个体交叉学科影响力</h3><p>科学网博客的专业领域为注册用户通过实际情况自主选择，本研究限定的专业领域为<br>管理综合大类中的情报学，为验证是否存在用户为交叉学科或多专业领域研究中具有突出影响力的研究者，笔者统计出学术圈内拥有博客总好友数最多的学者为 U359，统计信息如表 7 所示。U359 属于 10-核区，说明在情报学的学术圈内也处于重要地位。<br>U359 共发表了 24201 篇博文，并且其在科学网博客的周排行与总排行分别处于所有用户中第一、第二的位置(截止 2016 年 5 月 17 日，)②,说明 U359 博主在科学网博客的知名度和影响力都很高。通过在中国知网期刊论文数据库中对其研究成果进行检索后得知，U359 的研究方向主要为医学情报与信息，横跨了医学与情报学两个专业类别，为一门交叉学科。<br><img src="DraggedImage-11.tiff" alt></p>
+<h2 id="3-研究结论与讨论"><a href="#3-研究结论与讨论" class="headerlink" title="3    研究结论与讨论"></a>3    研究结论与讨论</h2><h3 id="3-1-总体具有小世界效应，博客间关联程度较高"><a href="#3-1-总体具有小世界效应，博客间关联程度较高" class="headerlink" title="3.1    总体具有小世界效应，博客间关联程度较高"></a>3.1    总体具有小世界效应，博客间关联程度较高</h3><p>从总体上看，本社会网络存在小世界效应，网络中成员互相之间的交流比较便捷、通畅。在非正式交流中，学者发表言论的数量和频率反映了其进行非正式交流的强度，但是有的作者可能偏向于私密的一对一交流，而有的学者热衷于进行主动多向的信息发布。本研究初步考察了成员之间可能发生联系的网络情况，但是没有具体考察这些成员之间交流的方式、强度。可以假设，高影响力学者的非正式交流更倾向于通过主动多向的信息发布方式，高影响力学者大多在正式交流中也具有较高的影响力，学者进行非正式交流的强度与他们的影响力正相关。这些假设有待于通过更进一步的研究来验证。</p>
+<h3 id="3-2-本社区内非正式交流规模有限"><a href="#3-2-本社区内非正式交流规模有限" class="headerlink" title="3.2    本社区内非正式交流规模有限"></a>3.2    本社区内非正式交流规模有限</h3><p>基于社会网络的中心性与凝聚子群的考察，整个学术圈内存在以 U98、U167、U456 为代表的多位具有高影响力的博主，他们在整个社会网络中处于核心地位，学术交流影响力强，为学科领域的研究提供独到的见解；整个学术网络基本可以通过弱关联进行链接， 各个节点都可以成为信息或知识的来源，这对知识的共享和创新有重要意义。但该博客社区的网络密度较小，博主之间的联系还不太紧密，造成这一现象的原因可能有：科学网自<br>② 博客排行地址：<a href="http://bbs.sciencenet.cn/blog.php?COLLCC=2244160531&amp;mod=list.来源：科学网-博客。" target="_blank" rel="noopener">http://bbs.sciencenet.cn/blog.php?COLLCC=2244160531&amp;mod=list.来源：科学网-博客。</a><br>身作为非正式交流平台具有局限性，其采用的较为传统的 Blog 模式，不太适用于当今移动互联网短、平、快的趋势；用户粘性不足，在正式交流中具备高影响力的作者几乎没有参与这个封闭学术圈的非正式交流；非正式交流途径分散，当前微信、微博等社交应用风<br>靡，学者之间进行非正式交流的方式趋于多样化，而不会集中在某一平台上。</p>
+<h3 id="3-3-情报学学者的非正式交流领域趋向多元化"><a href="#3-3-情报学学者的非正式交流领域趋向多元化" class="headerlink" title="3.3    情报学学者的非正式交流领域趋向多元化"></a>3.3    情报学学者的非正式交流领域趋向多元化</h3><p>科学网情报学圈子的狭小和人员的年轻化，都可能与非正式交流的领域泛化有关。更多的在情报学领域进行正式交流的学者选择将自己的研究领域设置成为管理综合等宽泛的分类，而不局限于情报学圈子内的讨论；另一方面，发现在情报学圈子内具备高影响力的作者也大多具备多学科背景。情报学学术圈的非正式交流可能更趋向于跨学科、多元化， 而表现出与正式交流的某种相关性。这种非正式交流的多元化，是否与正式交流的跨学科融合存在关联，也值得进一步的考察。</p>
+<h2 id="4-结语"><a href="#4-结语" class="headerlink" title="4    结语"></a>4    结语</h2><p>可以看出，科学网博客情报学领域的博主之间的非正式交流交流和互动质量一般，同时也存在小世界效应、高影响力博主、学术小团体等典型社会网络因素，这个学术圈子表现出了小规模、年轻化、多元化的特点，对形式多样化的学术交流产生了一定的积极影 响。其他封闭学术圈是否会表现出类似的特点，封闭学术圈的交流质量与其规模是否存在联系，封闭学术圈的交流行为和内容是否会与正式交流表现出关联性，对于这些问题的研究，将有助于进一步发现非正式交流的内在规律，从而为促进非正式交流，推动科研成果的产出带来重大意义。</p>
+<p>[^1]:    苏）米哈伊洛夫, 乔尔内等. 科学交流与情报学<a href="#">M</a>. 北京: 科学技术文献出版社，<br>    1988：49-61.</p>
+<p>[^2]:    邹儒楠, 于建荣. 数字时代非正式学术交流特点的社会网络分析——以小木虫生命科学论坛为例<a href="#">J</a>.情报科学,2015,(7):81-86.</p>
+<p>[^3]:    贾新露, 王曰芬. 学术社交网络的概念、特点及研究热点<a href="#">J</a>. 图书馆学研究, 2016, (05): 7-13</p>
+<p>[^4]:    王运锋, 夏德宏, 颜尧妹. 社会网络分析与可视化工具 NetDraw 的应用案例分析<a href="#">J</a>. 现代教育技术, 2008, (04): 85-89.</p>
+<p>[^5]:     MBA 智库百科. 社会网络分析<a href="#">EB/OL</a>.<a href="#">2016-05-12</a>. <a href="http://wiki.mbalib.com/wiki/社会网络分析" target="_blank" rel="noopener">http://wiki.mbalib.com/wiki/社会网络分析</a>.</p>
+<p>[^6]:    汪维富, 钟志贤. 博客社区中好友链接的社会网络分析——以科学网的博客社区为分析案例<a href="#">J</a>. 现代远距离教育, 2010, (05): 55-59; 李纲, 李昂. 基于社会网络分析的学术团体合著研究——以武汉大学计算机学院为例<a href="#">J</a>. 信息资源管理学报, 2011, (03): 43-47; 贡金涛, 魏晓峰. 基于社会网络分析的专利合著网络研究——以风力发电技术领域在华专利为例<a href="#">J</a>. 情报杂志, 2013, (11): 37-42.</p>
+<p>[^7]:    汪维富, 钟志贤. 博客社区中好友链接的社会网络分析——以科学网的博客社区为分析案例<a href="#">J</a>. 现代远距离教育, 2010, (05): 55-59.</p>
+<p>[^8]:    曹霞, 崔雷.  基于 SNA 的国外医学信息学领域合著网络研究<a href="#">J</a>. 现代情报, 2016, (03):<br>    129-134.</p>
+<p>[^9]:    刘红霞, 张进, 陈璟浩. WHO 英文网站健康主题语义链接关系社会网络分析<a href="#">J</a>. 图书情报工作, 2014, (13): 75-82.</p>
+<p>[^10]:    姜鑫, 田志伟.  微博社区内信息传播的“小世界”现象及实证研究——以腾讯微博为例<a href="#">J</a>.情报科学, 2012, (08): 1139-1142.</p>
+<p>[^11]:    平亮, 宗利永. 基于社会网络中心性分析的微博信息传播研究——以 Sina 微博为例<a href="#">J</a>. 图书情报知识, 2010, (06): 92-97.</p>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+  </div>
+
+
+<script src="/js/book-post.js"></script>
+        </div>
+      </div>
+
+      <div class="column col-2 hide-lg">
+        <div class="book-toc">
+  <div class="book-tocbot">
+  </div>
+  <div class="book-tocbot-menu">
+    <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+    <a onclick="go_top()">Back to top</a>
+    <a onclick="go_bottom()">Go to bottom</a>
+  </div>
+</div>
+
+<script>
+tocbot.init({
+  tocSelector: '.book-tocbot',
+  contentSelector: '.book-post',
+  headingSelector: 'h1, h2, h3, h4, h5',
+  collapseDepth: 2,
+  orderedList: false,
+  scrollSmooth: false,
+});
+
+function expand_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 6,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "collapse_toc()");
+  b.innerHTML = "Collapse all"
+}
+
+function collapse_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 2,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "expand_toc()");
+  b.innerHTML = "Expand all"
+}
+
+function go_top() {
+  window.scrollTo(0, 0);
+}
+
+function go_bottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+</script>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
